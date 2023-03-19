@@ -1,0 +1,18 @@
+body {
+    background-color: #ffffff;
+  }
+
+h1 {
+  color: #ff0044;
+  text-align: center;
+}
+img {
+  width: 1600px;
+  height: 200px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.form-container {
+    text-align: center;
+  }

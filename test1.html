@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <style type="text/css">
+      .progress_bar .pro-bar {
+        background: hsl(0, 0%, 97%);
+        box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1) inset;
+        height:4px;
+        margin-bottom: 12px;
+        margin-top: 50px;
+        position: relative;
+      }
+      .progress_bar .progress_bar_title{
+        /*color: hsl(218, 4%, 50%);*/
+        color: #D5D6E2;
+        font-size: 15px;
+        font-weight: 300;
+        position: relative;
+        top: -28px;
+        z-index: 1;
+      }
+      .progress_bar .progress_number{
+        float: right;
+        margin-top: -24px;
+      }
+      .progress_bar .progress-bar-inner {
+        background-color: hsl(0, 0%, 88%);
+        display: block;
+        width: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: width 1s linear 0s;
+        animation: animate-positive 2s;
+      }
+      .progress_bar .progress-bar-inner:before {
+        content: "";
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        position: absolute;
+        right: 1px;
+        top: 0;
+        z-index: 1;
+      }
+      .progress_bar .progress-bar-inner:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: inherit;
+        border-radius: 50%;
+        position: absolute;
+        right: -4px;
+        top: -5px;
+      }
+      @-webkit-keyframes animate-positive{
+        0% { width: 0%; }
+      }
+      @keyframes animate-positive{
+        0% { width: 0%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-5 col-md-6">
+              <div class="progress_bar">
+                <div class="pro-bar">
+                  <small class="progress_bar_title">
+                    HTML5
+                    <span class="progress_number">89%</span>
+                  </small>
+                  <span class="progress-bar-inner" style="background-color: #1abc9c; width: 89%;" data-value="89" data-percentage-value="89"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
