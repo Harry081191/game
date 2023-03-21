@@ -24,7 +24,11 @@
         <form action="test.php" method="get">
             <div class="form-group">
               <label for="username">電子郵件</label>
-              <input type="text" class="form-control" id="username" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="請輸入電子信箱">
+              <input type="text" class="form-control" id="username" name="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="請輸入電子信箱" required>
+            </div>
+            <div class="form-group">
+              <label for="username">ID</label>
+              <input type="text" class="form-control" id="username" name="username" placeholder="請輸入角色名" required>
             </div>
             <div class="form-group">
               <label for="password">密碼</label>
