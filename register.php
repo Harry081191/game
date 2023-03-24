@@ -35,5 +35,27 @@
       </div>
   </body>
   <?php
+  // 檢查是否有表單提交
+  if (isset($_GET['email']) && isset($_GET['username'])) {
+    // 連接資料庫
+    $conn = mysqli_connect("localhost", "root", "", "mydb");
+    // 檢查連接是否成功
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    // 尋找指定ID的記錄，如果找到就更新email，否則插入新的記錄
+    $id = $_GET['username'];
+    $email = $_GET['email'];
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE id='$id'");
+    if (mysqli_num_rows($result) > 0) {
+      mysqli_query($conn, "UPDATE users SET email='$email' WHERE id='$id'");
+      echo "更新成功";
+    } else {
+      mysqli_query($conn, "INSERT INTO users (id, email) VALUES ('$id', '$email')");
+      echo "新增成功";
+    }
+    // 關閉資料庫連接
+    mysqli_close($conn);
+}
 ?>
 </html>
