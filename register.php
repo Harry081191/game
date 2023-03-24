@@ -30,10 +30,6 @@
               <label for="username">ID</label>
               <input type="text" class="form-control" id="username" name="username" placeholder="請輸入角色名" required>
             </div>
-            <div class="form-group">
-              <label for="password">密碼</label>
-              <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼" required>
-            </div>
             <button type="submit" class="btn btn-primary">註冊</button>
         </form>
       </div>
