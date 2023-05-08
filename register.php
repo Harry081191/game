@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
               <label for="username">密碼</label>
-              <input type="text" class="form-control" id="username" name="username" pattern="[A-Za-z0-9]{8,12} placeholder="請輸入密碼(只允許8-12位的英文字母和數字的組合)" required>
+              <input type="text" class="form-control" id="username" name="username" pattern="[A-Za-z0-9]{8,12}" placeholder="請輸入密碼(只允許8-12位的英文字母和數字的組合)" required>
             </div>
             <button type="submit" class="btn btn-primary">註冊</button>
         </form>
