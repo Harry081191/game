@@ -1,18 +1,17 @@
-body {
-    background-color: #757070;
-  }
-
+h2 {
+  background-color: #757070;
+ }
 h1 {
   color: #ff0044;
   text-align: center;
 }
 img {
-  width: 1110px;
-  height: 150px;
+  height: 475px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .form-container {
     text-align: center;
   }
