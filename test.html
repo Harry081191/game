@@ -26,16 +26,21 @@
             <div class="col-6">
               <div class="jumbotron">
                 <form action="longin.php" method="get">
+                  <h1>登入</h1>
                   <strong>帳號</strong>
                   <input type="text" class="form-control" id="username" name="username" placeholder="請輸入帳號">
                   </br>
                   <strong>密碼</strong>
                   <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼">
-                  <div class="row">
-                    <div class="col-10">
-                      <button type="submit" class="btn btn-outline-danger">登入</button>   
-                    </div> 
-                  </div>          
+                  <div class="d-grid gap-2 col-6 mx-auto">
+                    <a href="123" class="d-grid gap-2 d-md-flex justify-content-center">
+                      Forget Password?
+                    </a>
+                    <button type="submit" class="btn btn-outline-danger">登入</button>
+                    <a href="register.php" class="d-grid gap-2 d-md-flex justify-content-center">
+                      Create Acount?
+                    </a>
+                  </div>
                 </form>
               </div>
             </div>
