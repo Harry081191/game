@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <div class = "container">
       <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -21,7 +20,6 @@
           </ul>
         </div>
       </nav>
-    </div>
       <div class="text-center">
       <?php
       $username = $_GET['username'];
