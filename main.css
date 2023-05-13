@@ -7,10 +7,10 @@ h1 {
   text-align: center;
 }
 img {
-  width: 1300px;
+  width: 1110px;
   height: 150px;
   position: relative;
-  left: 48%;
+  left: 50%;
   transform: translateX(-50%);
 }
 .form-container {

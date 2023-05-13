@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
+    <div class = "container">
       <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
           <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
               aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -34,7 +35,8 @@
               </form>
           </div>
       </nav>
-      <div class="jumbotron">
+    </div>
+      <div class="container" style = "background-color:white">
         <h1 class="display-3">Jumbo heading</h1>
         <p class="lead">Jumbo helper text</p>
         <hr class="my-2">
