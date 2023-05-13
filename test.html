@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
+
   </head>
   <body>
       <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">遊戲名</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button>
          <div class="collapse navbar-collapse" id="collapsibleNavId">
@@ -17,31 +18,24 @@
              </ul>
          </div>
       </nav>
-    <h1>遊戲網站</h1>
-
     
     <h2>
-      <div class="p-3 wrapper">
-        <div class="row">
-          <div class="col-7">
-            <img src = "FF11_HAIKEI.jpg">
-          </div>
-          <div class="col-3">
-            <div class="jumbotron">
-              <h1 class="display-3">遊戲名</h1>
-              <hr class="my-2">
-              <div>
-                <form action="longin.php" method="get">
-                  <div class="form-group">
-                    <label for="username">ID</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="請輸入角色名">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">密碼</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="請輸入密碼">
-                  </div>
-                  <button type="submit" class="btn btn-primary">登入</button>
-                  <button type="submit" formaction="register.php" class="btn btn-primary">註冊</button>
+      <div class="p-5 wrapper">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <div class="jumbotron">
+                <form action="" class="login">
+                  <strong>帳號</strong>
+                  <input type="text" class="form-control" placeholder="請輸入帳號">
+                  </br>
+                  <strong>密碼</strong>
+                  <input type="password" class="form-control" placeholder="請輸入密碼">
+                  <div class="row">
+                    <div class="col-10">
+                      <button type="submit" class="btn btn-outline-danger">登入</button>   
+                    </div> 
+                  </div>          
                 </form>
               </div>
             </div>

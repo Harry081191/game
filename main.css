@@ -1,6 +1,7 @@
-h2 {
-  background-color: #757070;
- }
+body{
+  background-image: url('FF11_HAIKEI.jpg');
+  background-size: cover;
+}
 h1 {
   color: #ff0044;
   text-align: center;
@@ -18,3 +19,6 @@ img {
   .nav-link {
     color: white;
   }
+.buttom{
+  height: 475px;
+}
