@@ -51,9 +51,31 @@
               <tr>
                 <th scope="row" colspan="2">等級:123</th>
               </tr>
-              <tr>
-                <th scope="row">血量<br>攻擊<br>魔力</th>
-                <td>物防<br>魔防<br>傷害減免</td>
+              <tr scope="row">
+                <th>
+                  <div class="col">
+                    <?php
+                    $username = $_GET['username'];
+                    $password = $_GET['password'];
+                    // 輸出 HTML
+                    print "<p>血量: " . $username . "</p>";
+                    print "<p>攻擊: " . $username . "</p>";
+                    print "<p>魔力: " . $username . "</p>";
+                    ?>
+                  </div>
+                </th>
+                <th>
+                  <div class="col">
+                    <?php
+                    $username = $_GET['username'];
+                    $password = $_GET['password'];
+                    // 輸出 HTML
+                    print "<p>物防: " . $password . "</p>";
+                    print "<p>魔防: " . $username . "</p>";
+                    print "<p>傷害減免: " . $username . "</p>";
+                    ?>
+                  </div>
+                </th>
               </tr>
             </tbody>
           </table>
