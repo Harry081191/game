@@ -27,42 +27,39 @@
     <div class="p-3 wrapper">
       <div class="row justify-content-center">
         <div class="col-6">
-          <table class="table table-bordered table-dark table-borderless">
+          <table class="table table-bordered table-dark table-borderless" table style="text-align:center;" border="1">
             <thead>
               <tr>
                 <th scope="col"></th>
-                <th scope="col">角色資訊</th>
-                <th scope="col">角色列表</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row"></th>
-                <td><img class="m1" src="deadgod.jpg"></td>
-                <td></td>
+                <th scope="row" colspan="2">
+                  <div class="text-center">
+                    <?php
+                    $username = $_GET['username'];
+                    $password = $_GET['password'];
+                    // 輸出 HTML
+                    print "<p>歡迎回來: " . $username . "</p>";
+                    ?>
+                  </div>
+                  插入圖片
+                </th>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td>角色數值</td>
-                <td>@fat</td>
+                <th scope="row" colspan="2">等級:123</th>
               </tr>
               <tr>
-                <th scope="row"></th>
-                <td colspan="2">Larry the Bird</td>
+                <th scope="row">血量<br>攻擊<br>魔力</th>
+                <td>物防<br>魔防<br>傷害減免</td>
               </tr>
             </tbody>
           </table>
           <div class="col-6">
           </div>
         </div>
-      </div>
-      <div class="text-center">
-        <?php
-        $username = $_GET['username'];
-        $password = $_GET['password'];
-        // 輸出 HTML
-        print "<p>歡迎回來: " . $username . "</p>";
-        ?>
       </div>
       <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
