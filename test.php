@@ -23,16 +23,49 @@
       </ul>
     </div>
   </nav>
-  <div class="text-center">
-    <?php
-    $username = $_GET['username'];
-    $password = $_GET['password'];
-    // 輸出 HTML
-    print "<p>歡迎回來: " . $username . "</p>";
-    ?>
-  </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <div class="container">
+    <div class="p-3 wrapper">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <table class="table table-bordered table-dark table-borderless">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">角色資訊</th>
+                <th scope="col">角色列表</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td><img class="m1" src="deadgod.jpg"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>角色數值</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td colspan="2">Larry the Bird</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="col-6">
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <?php
+        $username = $_GET['username'];
+        $password = $_GET['password'];
+        // 輸出 HTML
+        print "<p>歡迎回來: " . $username . "</p>";
+        ?>
+      </div>
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </body>
 
 </html>
