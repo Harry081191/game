@@ -26,65 +26,25 @@
   <div class="container">
     <div class="p-3 wrapper">
       <div class="row justify-content-center">
-        <div class="col-6">
-          <table class="table table-bordered table-dark table-borderless" table style="text-align:center;" border="1">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row" colspan="2">
-                  <div class="text-center">
-                    <?php
-                    $username = $_GET['username'];
-                    $password = $_GET['password'];
-                    // 輸出 HTML
-                    print "<p>歡迎回來: " . $username . "</p>";
-                    ?>
-                  </div>
-                  插入圖片
-                </th>
-              </tr>
-              <tr>
-                <th scope="row" colspan="2">等級:123</th>
-              </tr>
-              <tr scope="row">
-                <th>
-                  <div class="col">
-                    <?php
-                    $username = $_GET['username'];
-                    $password = $_GET['password'];
-                    // 輸出 HTML
-                    print "<p>血量: " . $username . "</p>";
-                    print "<p>攻擊: " . $username . "</p>";
-                    print "<p>魔力: " . $username . "</p>";
-                    ?>
-                  </div>
-                </th>
-                <th>
-                  <div class="col">
-                    <?php
-                    $username = $_GET['username'];
-                    $password = $_GET['password'];
-                    // 輸出 HTML
-                    print "<p>物防: " . $password . "</p>";
-                    print "<p>魔防: " . $username . "</p>";
-                    print "<p>傷害減免: " . $username . "</p>";
-                    ?>
-                  </div>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <div class="col-6">
-          </div>
+        <div class="col-6" style="text-align: center">
+          <h2>角色資訊</h2>
+        </div>
+        <div class="col-7 bg-dark text-white" style="text-align: center;">
+          <h2 style="font-size:100px;">角色資訊</h2>
+        </div>
+        <div class="col-7 bg-dark text-white" style="text-align: center;">
+          <?php
+          $username = $_GET['username'];
+          $password = $_GET['password'];
+          // 輸出 HTML
+          echo '<span style="font-size: 50px;"> ' . $username.  '等級</span>';
+          ?>
         </div>
       </div>
-      <!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </body>
 
 </html>
