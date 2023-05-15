@@ -30,7 +30,7 @@
           <h2>角色資訊</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
-          <h2 style="font-size:80px;">角色資訊(角色圖片)</h2>
+          <h2 style="font-size:80px;">角色圖片</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
           <?php
