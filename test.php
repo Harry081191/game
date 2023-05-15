@@ -29,15 +29,39 @@
         <div class="col-6" style="text-align: center">
           <h2>角色資訊</h2>
         </div>
-        <div class="col-7 bg-dark text-white" style="text-align: center;">
-          <h2 style="font-size:100px;">角色資訊</h2>
+        <div class="col-10 bg-dark text-white" style="text-align: center;">
+          <h2 style="font-size:80px;">角色資訊(角色圖片)</h2>
         </div>
-        <div class="col-7 bg-dark text-white" style="text-align: center;">
+        <div class="col-10 bg-dark text-white" style="text-align: center;">
           <?php
           $username = $_GET['username'];
           $password = $_GET['password'];
           // 輸出 HTML
           echo '<span style="font-size: 50px;"> ' . $username.  '等級</span>';
+          ?>
+        </div>
+        <div class="col-5 bg-dark text-white" style="text-align: center;">
+          <?php
+          $username = $_GET['username'];
+          $password = $_GET['password'];
+          // 輸出 HTML
+          echo '<span style="font-size: 25px;">血量:' . $username.  '</span>';
+          echo "<br>";
+          echo '<span style="font-size: 25px;">攻擊:' . $username.  '</span>';
+          echo "<br>";
+          echo '<span style="font-size: 25px;">魔力:' . $username.  '</span>';
+          ?>
+        </div>
+        <div class="col-5 bg-dark text-white" style="text-align: center;">
+          <?php
+          $username = $_GET['username'];
+          $password = $_GET['password'];
+          // 輸出 HTML
+          echo '<span style="font-size: 25px;">物防:' . $username.  '</span>';
+          echo "<br>";
+          echo '<span style="font-size: 25px;">魔防:' . $username.  '</span>';
+          echo "<br>";
+          echo '<span style="font-size: 25px;">傷害減免:' . $password.  '</span>';
           ?>
         </div>
       </div>
