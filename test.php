@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,6 +32,15 @@
           <h2>角色資訊</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
+          <select>
+            <option>角色列表</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Hamster</option>
+            <option>Parrot</option>
+            <option>Spider</option>
+            <option>Goldfish</option>
+          </select>
           <h2 style="font-size:80px;">角色圖片</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
@@ -37,7 +48,7 @@
           $username = $_GET['username'];
           $password = $_GET['password'];
           // 輸出 HTML
-          echo '<span style="font-size: 50px;"> ' . $username.  '等級</span>';
+          echo '<span style="font-size: 50px;"> ' . $username . '等級</span>';
           ?>
         </div>
         <div class="col-5 bg-dark text-white" style="text-align: center;">
@@ -45,11 +56,11 @@
           $username = $_GET['username'];
           $password = $_GET['password'];
           // 輸出 HTML
-          echo '<span style="font-size: 25px;">血量:' . $username.  '</span>';
+          echo '<span style="font-size: 25px;">血量:' . $username . '</span>';
           echo "<br>";
-          echo '<span style="font-size: 25px;">攻擊:' . $username.  '</span>';
+          echo '<span style="font-size: 25px;">攻擊:' . $username . '</span>';
           echo "<br>";
-          echo '<span style="font-size: 25px;">魔力:' . $username.  '</span>';
+          echo '<span style="font-size: 25px;">魔力:' . $username . '</span>';
           ?>
         </div>
         <div class="col-5 bg-dark text-white" style="text-align: center;">
@@ -57,11 +68,11 @@
           $username = $_GET['username'];
           $password = $_GET['password'];
           // 輸出 HTML
-          echo '<span style="font-size: 25px;">物防:' . $username.  '</span>';
+          echo '<span style="font-size: 25px;">物防:' . $username . '</span>';
           echo "<br>";
-          echo '<span style="font-size: 25px;">魔防:' . $username.  '</span>';
+          echo '<span style="font-size: 25px;">魔防:' . $username . '</span>';
           echo "<br>";
-          echo '<span style="font-size: 25px;">傷害減免:' . $password.  '</span>';
+          echo '<span style="font-size: 25px;">傷害減免:' . $password . '</span>';
           ?>
         </div>
       </div>

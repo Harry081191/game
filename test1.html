@@ -2,92 +2,24 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col col-lg-2">
-                1 of 3
-            </div>
-            <div class="col-md-auto">
-                Variable width content
-            </div>
-            <div class="col col-lg-2">
-                3 of 3
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                1 of 3
-            </div>
-            <div class="col-md-auto">
-                Variable width content
-            </div>
-            <div class="col col-lg-2">
-                3 of 3
-            </div>
-        </div>
-    </div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+  </div>
 </body>
-
-
-<table class="table table-bordered table-dark table-borderless" table style="text-align:center;" border="1">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row" colspan="2">
-          <div class="text-center">
-            <?php
-            $username = $_GET['username'];
-            $password = $_GET['password'];
-            // 輸出 HTML
-            print "<p>歡迎回來: " . $username . "</p>";
-            ?>
-          </div>
-          插入圖片
-        </th>
-      </tr>
-      <tr>
-        <th scope="row" colspan="2">等級:123</th>
-      </tr>
-      <tr scope="row">
-        <th>
-          <div class="col">
-            <?php
-            $username = $_GET['username'];
-            $password = $_GET['password'];
-            // 輸出 HTML
-            print "<p>血量: " . $username . "</p>";
-            print "<p>攻擊: " . $username . "</p>";
-            print "<p>魔力: " . $username . "</p>";
-            ?>
-          </div>
-        </th>
-        <th>
-          <div class="col">
-            <?php
-            $username = $_GET['username'];
-            $password = $_GET['password'];
-            // 輸出 HTML
-            print "<p>物防: " . $password . "</p>";
-            print "<p>魔防: " . $username . "</p>";
-            print "<p>傷害減免: " . $username . "</p>";
-            ?>
-          </div>
-        </th>
-      </tr>
-    </tbody>
-</table>

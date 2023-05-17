@@ -21,7 +21,7 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">職業討論版</a>
+            aria-expanded="true">職業討論版</a>
           <div class="dropdown-menu" aria-labelledby="dropdownId">
             <a class="dropdown-item" href="#">戰士討論區</a>
             <a class="dropdown-item" href="#">射手討論區</a>
