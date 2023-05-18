@@ -33,15 +33,13 @@
           <h2>角色資訊</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
-          <select>
-            <option>角色列表</option>
-            <option>Dog</option>
-            <option>Cat</option>
-            <option>Hamster</option>
-            <option>Parrot</option>
-            <option>Spider</option>
-            <option>Goldfish</option>
-          </select>
+          <div style="text-align: right;">
+            <select>
+              <option>角色名稱1</option>
+              <option>角色名稱2</option>
+              <option>角色名稱3</option>
+            </select>
+          </div>
           <h2 style="font-size:80px;">角色圖片</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
@@ -79,8 +77,6 @@
       </div>
     </div>
   </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 </body>
 
 </html>
