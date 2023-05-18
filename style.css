@@ -34,3 +34,6 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
+.titletext{
+  font-size:20px;
+}
