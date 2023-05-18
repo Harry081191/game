@@ -10,7 +10,9 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -33,12 +35,16 @@
           <h2>角色資訊</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
-          <div style="text-align: right;">
-            <select>
-              <option>角色名稱1</option>
-              <option>角色名稱2</option>
-              <option>角色名稱3</option>
-            </select>
+          <div class="dropdown" style="text-align: right;">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              角色列表
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">角色1</a></li>
+              <li><a class="dropdown-item" href="#">角色2</a></li>
+              <li><a class="dropdown-item" href="#">角色3</a></li>
+            </ul>
           </div>
           <h2 style="font-size:80px;">角色圖片</h2>
         </div>
