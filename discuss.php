@@ -35,19 +35,9 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <a class="nav-link titletext" href="test.php" style="color: white;">我的首頁 <span class="sr-only"></span></a>
-
       </form>
     </div>
   </nav>
-  <div class="container" style="background-color:white">
-    <h1 class="display-3">Jumbo heading</h1>
-    <p class="lead">Jumbo helper text</p>
-    <hr class="my-2">
-    <p>More info</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
-    </p>
-  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
