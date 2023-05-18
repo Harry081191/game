@@ -27,6 +27,10 @@
         </li>
       </ul>
     </div>
+    <from class="from-inline" style="text-align: right;">
+      <input type="text" class="from-control mr-3 mb-2 mb-sm-0" placeholder="Serch player">
+      <button type="submit" class="btn btn-dark">Serch</button>
+    </from>
   </nav>
   <div class="container">
     <div class="p-3 wrapper">
