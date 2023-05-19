@@ -54,6 +54,7 @@
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
           <?php
+          $username = $_GET['username'];
           $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
           $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
 
@@ -65,19 +66,19 @@
             ]
           ];
 
+          $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
           $context = stream_context_create($options);
-          $response = file_get_contents($url, false, $context);
-
-          $data = json_decode($response, true); // 解析 JSON 資料為 PHP 陣列
+          $response = file_get_contents($queryUrl, false, $context);
           
           // 處理回應
-          if ($data && isset($data['User1'])) {
-            $user1 = $data['User1'];
-
-            $username = $user1['Username'];
-            echo '<span style="font-size: 50px;"> ' . $username . '等級</span>';
+          if ($response === false) {
+            echo "Error retrieving data from Firebase";
           } else {
-            echo "User1 not found";
+            $data = json_decode($response, true);
+            // 處理獲得的資料
+            foreach ($data as $key => $value) {
+              echo '<span style="font-size: 50px;"> ' . $value['Password'] . '等級</span>';
+            }
           }
           ?>
         </div>
