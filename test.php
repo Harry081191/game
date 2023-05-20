@@ -1,3 +1,6 @@
+<?php
+$username = $_GET['username'];
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,6 +16,48 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      // 當使用者選擇角色時觸發
+      $('#user1').click(function (e) {
+        e.preventDefault();
+        var username = 'User1'; // 將選擇的角色名稱設為'User1'
+        loadData(username); // 載入相對應的資料
+      });
+
+      $('#user2').click(function (e) {
+        e.preventDefault();
+        var username = 'User2'; // 將選擇的角色名稱設為'User2'
+        loadData(username); // 載入相對應的資料
+      });
+      // 初始載入預設角色的資料
+      var defaultUsername = 'User1'; // 預設選擇的角色名稱
+      loadData(defaultUsername);
+    });
+    // 載入相對應角色的資料
+    function loadData(username) {
+      // 發送 GET 請求到 Firebase
+      $.ajax({
+        url: 'https://game-ab172-default-rtdb.firebaseio.com/Users.json',
+        method: 'GET',
+        success: function (response) {
+          var userData = response[username]; // 根據角色名稱取得對應的資料
+          if (userData) {
+            // 更新網頁內容
+            $('#hp').text('HP: ' + userData.HP);
+            $('#mp').text('MP: ' + userData.MP);
+            $('#atk').text('ATK: ' + userData.ATK);
+            $('#pd').text('物防: ' + userData.PD);
+            $('#md').text('魔防: ' + userData.MD);
+            $('#damageReduction').text('傷害減免: ' + userData.damagereduction);
+          }
+        },
+        error: function () {
+          console.log('Error retrieving data from Firebase');
+        }
+      });
+    }
+  </script>
 </head>
 
 <body>
@@ -45,16 +90,18 @@
               角色列表
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">角色1</a></li>
-              <li><a class="dropdown-item" href="#">角色2</a></li>
-              <li><a class="dropdown-item" href="#">角色3</a></li>
+              <li><a class="dropdown-item" href="#" id="user1">User1</a></li>
+              <li><a class="dropdown-item" href="#" id="username">User2</a>
+                <?php
+                $username = $_GET['username'];
+                ?>
+              </li>
             </ul>
           </div>
           <h2 style="font-size:80px;">角色圖片</h2>
         </div>
         <div class="col-10 bg-dark text-white" style="text-align: center;">
           <?php
-          $username = $_GET['username'];
           $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
           $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
 
@@ -69,7 +116,7 @@
           $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
           $context = stream_context_create($options);
           $response = file_get_contents($queryUrl, false, $context);
-          
+
           // 處理回應
           if ($response === false) {
             echo "Error retrieving data from Firebase";
@@ -84,7 +131,6 @@
         </div>
         <div class="col-5 bg-dark text-white" style="text-align: center;">
           <?php
-          $username = $_GET['username'];
           $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
           $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
 
@@ -99,7 +145,7 @@
           $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
           $context = stream_context_create($options);
           $response = file_get_contents($queryUrl, false, $context);
-          
+
           // 處理回應
           if ($response === false) {
             echo "Error retrieving data from Firebase";
@@ -117,8 +163,7 @@
           ?>
         </div>
         <div class="col-5 bg-dark text-white" style="text-align: center;">
-        <?php
-          $username = $_GET['username'];
+          <?php
           $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
           $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
 
@@ -133,7 +178,7 @@
           $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
           $context = stream_context_create($options);
           $response = file_get_contents($queryUrl, false, $context);
-          
+
           // 處理回應
           if ($response === false) {
             echo "Error retrieving data from Firebase";

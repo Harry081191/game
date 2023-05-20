@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
 
 <body>
@@ -18,7 +17,7 @@
         <div class="row justify-content-center">
           <div class="col-6">
             <div class="jumbotron">
-              <form action="longin.php" method="get">
+              <form action="longin.php" method="post">
                 <h1>登入</h1>
                 <strong>帳號</strong>
                 <input type="text" class="form-control" id="username" name="username" placeholder="請輸入帳號或電子郵件">
@@ -35,7 +34,7 @@
                   </div>
                   <a href="register.php" class="d-grid gap-2 d-md-flex justify-content-center a2"
                     style="margin-top: 10px;">
-                    Create Acount?
+                    Create Account?
                   </a>
                 </div>
               </form>
@@ -45,5 +44,17 @@
       </div>
     </div>
   </h2>
+  <script>
+    // 獲取 URL 參數
+    const urlParams = new URLSearchParams(window.location.search);
+    const errorMessage = urlParams.get('error');
+
+    // 檢查是否有錯誤訊息
+    if (errorMessage) {
+      // 顯示錯誤訊息的彈出對話框
+      alert(errorMessage);
+    }
+  </script>
 </body>
+
 </html>
