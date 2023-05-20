@@ -85,25 +85,69 @@
         <div class="col-5 bg-dark text-white" style="text-align: center;">
           <?php
           $username = $_GET['username'];
-          $password = $_GET['password'];
-          // 輸出 HTML
-          echo '<span style="font-size: 25px;">血量:' . $username . '</span>';
-          echo "<br>";
-          echo '<span style="font-size: 25px;">攻擊:' . $username . '</span>';
-          echo "<br>";
-          echo '<span style="font-size: 25px;">魔力:' . $username . '</span>';
+          $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
+          $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
+
+          $options = [
+            'http' => [
+              'header' => "Content-type: application/json\r\n" .
+              "Authorization: key={$firebaseKey}\r\n",
+              'method' => 'GET'
+            ]
+          ];
+
+          $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
+          $context = stream_context_create($options);
+          $response = file_get_contents($queryUrl, false, $context);
+          
+          // 處理回應
+          if ($response === false) {
+            echo "Error retrieving data from Firebase";
+          } else {
+            $data = json_decode($response, true);
+            // 處理獲得的資料
+            foreach ($data as $key => $value) {
+              echo '<span style="font-size: 50px;"> HP ' . $value['HP'] . '</span>';
+              echo '<br>';
+              echo '<span style="font-size: 50px;"> MP ' . $value['MP'] . '</span>';
+              echo '<br>';
+              echo '<span style="font-size: 50px;"> ATK ' . $value['ATK'] . '</span>';
+            }
+          }
           ?>
         </div>
         <div class="col-5 bg-dark text-white" style="text-align: center;">
-          <?php
+        <?php
           $username = $_GET['username'];
-          $password = $_GET['password'];
-          // 輸出 HTML
-          echo '<span style="font-size: 25px;">物防:' . $username . '</span>';
-          echo "<br>";
-          echo '<span style="font-size: 25px;">魔防:' . $username . '</span>';
-          echo "<br>";
-          echo '<span style="font-size: 25px;">傷害減免:' . $password . '</span>';
+          $url = 'https://game-ab172-default-rtdb.firebaseio.com/Users.json';
+          $firebaseKey = 'AIzaSyD1wfBa3TTGdR4xqXg9kU3HaKpkkyQQpE8';
+
+          $options = [
+            'http' => [
+              'header' => "Content-type: application/json\r\n" .
+              "Authorization: key={$firebaseKey}\r\n",
+              'method' => 'GET'
+            ]
+          ];
+
+          $queryUrl = $url . '?orderBy="Username"&equalTo="' . urlencode($username) . '"';
+          $context = stream_context_create($options);
+          $response = file_get_contents($queryUrl, false, $context);
+          
+          // 處理回應
+          if ($response === false) {
+            echo "Error retrieving data from Firebase";
+          } else {
+            $data = json_decode($response, true);
+            // 處理獲得的資料
+            foreach ($data as $key => $value) {
+              echo '<span style="font-size: 50px;"> 物防 ' . $value['PD'] . '</span>';
+              echo '<br>';
+              echo '<span style="font-size: 50px;"> 魔防 ' . $value['MD'] . '</span>';
+              echo '<br>';
+              echo '<span style="font-size: 50px;"> 傷害減免 ' . $value['damagereduction'] . '</span>';
+            }
+          }
           ?>
         </div>
       </div>
