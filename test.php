@@ -107,11 +107,11 @@
             $data = json_decode($response, true);
             // 處理獲得的資料
             foreach ($data as $key => $value) {
-              echo '<span style="font-size: 50px;"> HP ' . $value['HP'] . '</span>';
+              echo '<span style="font-size: 30px;"> HP：' . $value['HP'] . '</span>';
               echo '<br>';
-              echo '<span style="font-size: 50px;"> MP ' . $value['MP'] . '</span>';
+              echo '<span style="font-size: 30px;"> MP：' . $value['MP'] . '</span>';
               echo '<br>';
-              echo '<span style="font-size: 50px;"> ATK ' . $value['ATK'] . '</span>';
+              echo '<span style="font-size: 30px;"> ATK：' . $value['ATK'] . '</span>';
             }
           }
           ?>
@@ -141,11 +141,11 @@
             $data = json_decode($response, true);
             // 處理獲得的資料
             foreach ($data as $key => $value) {
-              echo '<span style="font-size: 50px;"> 物防 ' . $value['PD'] . '</span>';
+              echo '<span style="font-size: 30px;"> 物防：' . $value['PD'] . '</span>';
               echo '<br>';
-              echo '<span style="font-size: 50px;"> 魔防 ' . $value['MD'] . '</span>';
+              echo '<span style="font-size: 30px;"> 魔防：' . $value['MD'] . '</span>';
               echo '<br>';
-              echo '<span style="font-size: 50px;"> 傷害減免 ' . $value['damagereduction'] . '</span>';
+              echo '<span style="font-size: 30px;"> 傷害減免：' . $value['damagereduction'] . '</span>';
             }
           }
           ?>
